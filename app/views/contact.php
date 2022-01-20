@@ -9,7 +9,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <form action="<?=App::route('/send-contact-email')?>" method="post">
+                    <form action="<?=App::path('/send-contact-email')?>" method="post">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="nameFloat" placeholder="Your Name" name="name">
                             <label for="nameFloat">Your Name</label>

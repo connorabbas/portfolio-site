@@ -2,14 +2,18 @@
 body {
   font-family: "Readex Pro", sans-serif;
 }
+.card {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 
 /* Header */
 .nav_icn {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   color: #fff !important;
   font-size: 1.5rem;
   opacity: 0.5;
@@ -39,6 +43,20 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+}
+
+/* Projects */
+.proj_card{
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.proj_card:hover{
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,.21)!important;
+    cursor: pointer;
+    color: #39c0ed!important
 }
 
 /* Animation */

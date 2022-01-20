@@ -7,7 +7,7 @@
     </div>
     <div class="row mb-5">
         <div class="col-md-4 col-sm-6 mb-3">
-            <div class="card sh-card ">
+            <div class="card sh-card shadow-3">
                 <div class="card-body">
                     <h5 class="card-title mb-4">Overview</h5>
                     <p class="text-muted small">Hey, my name is Connor. I really enjoy making things! Whether it's cooking, woodworking, music, or most importantly writing code. All of which I take great attention to detail with, and try to achieve as close to perfection as I can.</p>
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col-md-4 col-sm-6 mb-3">
-            <div class="card sh-card ">
+            <div class="card sh-card shadow-3">
                 <div class="card-body">
                     <h5 class="card-title mb-4">Work Experience</h5>
                     <ul class="text-muted small">
@@ -32,12 +32,13 @@
                         <ul>
                             <li>Ecommerce developer: July 2021 - Present</li>
                         </ul>
+                        <li>Freelance Work</li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="col-md-4 col-sm-6 mb-3">
-            <div class="card sh-card ">
+            <div class="card sh-card shadow-3">
                 <div class="card-body">
                     <h5 class="card-title mb-4">Education</h5>
                     <ul class="text-muted small">

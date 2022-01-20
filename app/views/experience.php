@@ -3,27 +3,27 @@
     <div class="row mt-5 mb-4">
         <div class="col-md-6">
             <h1 class="mb-4">Experience</h1>
-            <p class="small text-muted mb-4">I have experience in creating custom devloped tools with php using professional coding standards, making eye-catching front end designs from scratch, and building practical UI and UX content. I love the process creating a project from start to finish, reimagining legacy projects, and making them simple to use for the client or end-user</p>
+            <!-- <p class="small text-muted mb-4">I have experience in creating custom devloped tools with php using professional coding standards, making eye-catching front end designs from scratch, and building practical UI and UX content. I love the process creating a project from start to finish, reimagining legacy projects, and making them simple to use for the client or end-user</p> -->
         </div>
     </div>
     <div class="row mb-5">
         <div class="col-md-3 col-sm-6 mb-3">
-            <div class="card sh-card">
+            <div class="card sh-card shadow-3">
                 <div class="card-body">
                     <h5 class="card-title mb-4">PHP</h5>
                     <div>
                         <span class="badge rounded-pill bg-secondary">MVC Applicaitons</span>
                         <span class="badge rounded-pill bg-secondary">OOP</span>
-                        <span class="badge rounded-pill bg-secondary">SOLID</span>
                         <span class="badge rounded-pill bg-secondary">WordPress</span>
                         <span class="badge rounded-pill bg-secondary">Laravel</span>
+                        <span class="badge rounded-pill bg-secondary">CodeIgniter</span>
                         <span class="badge rounded-pill bg-secondary">PDO</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-3 col-sm-6 mb-3">
-            <div class="card sh-card">
+            <div class="card sh-card shadow-3">
                 <div class="card-body">
                     <h5 class="card-title mb-4">Front End</h5>
                     <div>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="col-md-3 col-sm-6 mb-3">
-            <div class="card sh-card">
+            <div class="card sh-card shadow-3">
                 <div class="card-body">
                     <h5 class="card-title mb-4">Database</h5>
                     <div>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="col-md-3 col-sm-6 mb-3">
-            <div class="card sh-card">
+            <div class="card sh-card shadow-3">
                 <div class="card-body">
                     <h5 class="card-title mb-4">& More...</h5>
                     <div>
@@ -65,26 +65,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <br>
-    <div class="row mb-5">
-        <div class="col-md-6 mb-5">
-            <h3 class="mb-4">Personal Projects</h3>
-            <button class="btn btn-dark btn-rounded mb-3">CAMABBAS Design (WordPress)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">T&M Lobby Group (WordPress)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">Elementor Widgets (WordPress)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">PHP Mini Framework (PHP MVC & OOP)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">Posty (Laravel)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">React JS (Budget Tracker)</button>&nbsp;
-        </div>
-        <div class="col-md-6">
-            <h3 class="mb-4">Work Projects</h3>
-            <button class="btn btn-dark btn-rounded mb-3">Inventory Management Plugin (WordPress)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">South Dakota Nutrition - Recipe Builder and Menu Calendar (WordPress)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">South Dakota Area Obituaries (WordPress)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">Wholesale Ecommerce Site (Full Stack)</button>&nbsp;
-            <button class="btn btn-dark btn-rounded mb-3">Product Inventory Report Tool (Full Stack)</button>&nbsp;
         </div>
     </div>
     <div class="row mb-5">

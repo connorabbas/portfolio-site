@@ -1,7 +1,14 @@
 <?php
 class Route
 {
-    public static function set($route, $callback)
+    /* protected $db;
+
+    public function __construct($db)
+    {
+        $this->db = $db;
+    } */
+
+    public function set($route, $callback)
     {
         global $ValidRoute;
     
@@ -16,7 +23,7 @@ class Route
     
         // If route is only /
         if ( $route_parts[0] == '' && count($request_url_parts) == 0 ) {
-            self::callRoute($route, $callback);
+            $this->callRoute($route, $callback);
             exit();
         }
 
@@ -31,21 +38,31 @@ class Route
                 array_push($parameters, $request_url_parts[$__i__]);
                 $$route_part=$request_url_parts[$__i__];
                 // Set dynamic route variables for get or post
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    $_POST[$route_part] = $$route_part;
-                } else {
+                if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                     $_GET[$route_part] = $$route_part;
-                }
+                } 
+                else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $_POST[$route_part] = $$route_part;
+                } 
+                else if ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
+                    $_PATCH[$route_part] = $$route_part;
+                } 
+                else if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
+                    $_PUT[$route_part] = $$route_part;
+                } 
+                else if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+                    $_DELETE[$route_part] = $$route_part;
+                } 
             }
             else if ( $route_parts[$__i__] != $request_url_parts[$__i__] ) {
                 return;
             } 
         }
-        self::callRoute($route, $callback);
+        $this->callRoute($route, $callback);
         exit();
     }
 
-    public static function callRoute($route, $callback)
+    public function callRoute($route, $callback)
     {
         if (is_array($callback)) {
             if (is_string($callback[0]) && is_string($callback[1]) && count($callback) == 2) {
@@ -53,7 +70,7 @@ class Route
                 $class_name = $callback[0];
                 $method_name = $callback[1];
                 $fully_qualified_class_name = "\\$class_name";
-                $obj = new $fully_qualified_class_name;
+                $obj = new $fully_qualified_class_name();
                 call_user_func( [$obj, $method_name],  $callback[1]);
                 $ValidRoute = $route;
             } 
@@ -64,7 +81,7 @@ class Route
         }
     }
 
-    public static function checkRoute()
+    public function checkRoute()
     {
         global $ValidRoute;
         if ($ValidRoute == null) {
@@ -72,38 +89,38 @@ class Route
         }
     }
 
-    public static function get($route, $callback)
+    public function get($route, $callback)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            self::set($route, $callback);
+            $this->set($route, $callback);
         } 
     }
 
-    public static function post($route, $callback)
+    public function post($route, $callback)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            self::set($route, $callback);
+            $this->set($route, $callback);
         } 
     }
 
-    public static function patch($route, $callback)
+    public function patch($route, $callback)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
-            self::set($route, $callback);
+            $this->set($route, $callback);
         } 
     }
 
-    public static function put($route, $callback)
+    public function put($route, $callback)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
-            self::set($route, $callback);
+            $this->set($route, $callback);
         } 
     }
 
-    public static function delete($route, $callback)
+    public function delete($route, $callback)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
-            self::set($route, $callback);
+            $this->set($route, $callback);
         } 
     }
 }

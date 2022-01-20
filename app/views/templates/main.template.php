@@ -26,13 +26,13 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Resources -->
-    <link href="<?=App::route('/resources/css/bootstrap/mdb.dark.min.css')?>" rel="stylesheet">
-    <link href="<?=App::route('/resources/css/styles.css')?>" rel="stylesheet">
-    <link href="<?=App::route('/resources/css/animate.min.css')?>" rel="stylesheet">
+    <link href="<?=App::path('/resources/css/bootstrap/mdb.dark.min.css')?>" rel="stylesheet">
+    <link href="<?=App::path('/resources/css/styles.css')?>" rel="stylesheet">
+    <link href="<?=App::path('/resources/css/animate.min.css')?>" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Scripts -->
-    <script src='<?=App::route('/resources/js/jquery.min.js')?>' type='text/javascript'></script>
+    <script src='<?=App::path('/resources/js/jquery.min.js')?>' type='text/javascript'></script>
 
     <!-- Page Title -->
     <title>Connor Abbas - <?= $pageTitle ?></title>
@@ -49,17 +49,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?=App::route('/')?>">Home</a>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="<?=App::path('/')?>">Home</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="<?=App::path('/about')?>">About Me</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="<?=App::path('/experience')?>">Experience</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="<?=App::path('/projects')?>">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=App::route('/about')?>">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?=App::route('/experience')?>">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?=App::route('/contact')?>">Contact</a>
+                        <a class="nav-link" href="<?=App::path('/contact')?>">Contact</a>
                     </li>
                 </ul>
                 <div class="d-flex">
@@ -71,15 +74,15 @@
     </nav>
     <div id="contentContainer" class="animate__animated animate__fadeIn">
         <?php
-        // Include view file from App::view()
-        require_once('./app/views/' . $view . '.php');
+        // Content View
+        App::view($view, $data, null);
         ?>
         <div id="particles-js"></div>
     </div>
 
 
     <!-- Script Resources -->
-    <script src="<?=App::route('/resources/js/bootstrap/bootstrap.bundle.min.js')?>"></script>
+    <script src="<?=App::path('/resources/js/bootstrap/bootstrap.bundle.min.js')?>"></script>
 
     </body><!-- CLose body from header.php -->
 
