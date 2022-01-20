@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;700&display=swap");
+body {
+  font-family: "Readex Pro", sans-serif;
+}
+
+/* Header */
+.nav_icn {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff !important;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+.nav_icn:hover {
+  opacity: 1;
+}
+
+/* Home */
+.line-1{
+    position: relative;
+    top: 50%;  
+    /* width: 24em;
+    margin: 0 auto; */
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* About */
+.sh-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 15em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
