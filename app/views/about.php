@@ -22,7 +22,7 @@
                     <ul class="text-muted small">
                         <li>Employer: The Gage Team</li>
                         <ul>
-                            <li>Software development intern: May 2019 - July 2019</li>
+                            <li>Software development intern: April 2019 - July 2019</li>
                         </ul>
                         <li>Employer: Sandhills Global</li>
                         <ul>
