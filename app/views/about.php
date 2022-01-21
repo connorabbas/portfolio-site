@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <h5 class="card-title mb-4">Work Experience</h5>
                     <ul class="text-muted small">
-                        <li>Employer: The Gage Team</li>
+                        <li>Employer: Sandhills Global</li>
                         <ul>
                             <li>Software development intern: April 2019 - July 2019</li>
                         </ul>
