@@ -7,6 +7,13 @@ error_reporting(E_ALL);
 require_once('./app/env.php');
 require_once('./app/globals.php');
 
+if (!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on" && BASE_DIR == '/') {
+    //Tell the browser to redirect to the HTTPS URL.
+    header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
+    //Prevent the rest of the script from executing.
+    exit;
+}
+
 // Autoload Classes
 spl_autoload_register(
     function ($class) {
