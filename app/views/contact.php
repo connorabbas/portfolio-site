@@ -38,6 +38,7 @@
             </div>
         </div>
         <div class="col-md-6">
+            <?= $alert ?>
             <ul class="text-muted">
                 <li>Need a website or development services?</li>
                 <li>Job opportunities?</li>

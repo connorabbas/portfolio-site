@@ -7,8 +7,37 @@ class ContactController
 
     public static function index()
     {
+        $alert = '';
+        ob_start();
+        if ($_GET['sent']) {
+            ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Message Sent!</strong> Thanks for your message, I will respond asap.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
+        }
+        if ($_GET['sent'] == 0 && $_GET['reason'] == "captcha") {
+            ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Message NOT sent.</strong> Please fill out the required captcha.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
+        }
+        if ($_GET['sent'] == 0 && $_GET['reason'] == "PHPMailer") {
+            ?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Message NOT sent.</strong> Email not working...
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php
+        }
+        $alert = ob_get_clean();
+
         return App::view('contact', [
-            'pageTitle' => 'Contact'
+            'pageTitle' => 'Contact',
+            'alert' => $alert,
         ]);
     }
 
@@ -28,7 +57,7 @@ class ContactController
             // If CAPTCHA is successfully completed...
             try {
                 //Recipients
-                $mail->setFrom('from@example.com', 'Mailer');
+                //$mail->setFrom('from@example.com', 'Mailer');
                 $mail->addAddress('abbasconnor@gmail.com', 'Connor Abbas'); //Add a recipient
                 $mail->addReplyTo('abbasconnor@gmail.com', 'Information');
 
@@ -45,10 +74,10 @@ class ContactController
                 <body>
                     <h3>New Email From Portfolio Site:</h3>
                     <br>
-                    <p>Name: <?= $POST['name'] ?></p>
-                    <p>Email: <?= $POST['email'] ?></p>
+                    <p>Name: <?= $_POST['name'] ?></p>
+                    <p>Email: <?= $_POST['email'] ?></p>
                     <p>Message:</p>
-                    <pre><?= $POST['message'] ?></pre>
+                    <pre><?= $_POST['message'] ?></pre>
                 </body>
                 </html>
                 <?php
@@ -60,8 +89,13 @@ class ContactController
                 $mail->Body    = $msgBody;
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             
-                $mail->send();
+                $sent = $mail->send();
                 echo 'Message has been sent';
+                if ($sent) {
+                    App::redirect('/contact?sent=1');
+                } else {
+                    App::redirect('/contact?sent=0&reason=PHPMailer');
+                }
             } catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
