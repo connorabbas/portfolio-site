@@ -78,7 +78,20 @@
         // Content View
         App::view($view, $data, null);
         ?>
-        <div id="particles-js"></div>
+        <div class="area">
+            <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            </ul>
+        </div>
     </div>
 
 
