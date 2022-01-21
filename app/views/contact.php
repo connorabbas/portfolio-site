@@ -28,7 +28,7 @@
                             <textarea class="form-control" placeholder="Leave a message here" id="messageFloat" name="message" style="height: 200px" required></textarea>
                             <label for="messageFloat">Message</label>
                             <div class="invalid-feedback mb-3">
-                                Please enter a message for me!.
+                                Please enter a message for me!
                             </div>
                         </div>
                         <div class="g-recaptcha" data-sitekey="6Lf43CoeAAAAAOQ6wyiidT5H8cxoq7sih2O3eeNY" data-theme="dark"></div><br>
