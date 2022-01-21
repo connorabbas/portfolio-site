@@ -8,32 +8,34 @@ class ContactController
     public static function index()
     {
         $alert = '';
-        ob_start();
-        if ($_GET['sent']) {
-            ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Message Sent!</strong> Thanks for your message, I will respond asap.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
+        if (isset($_GET['sent'])) {
+            ob_start();
+            if ($_GET['sent']) {
+                ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Message Sent!</strong> Thanks for your message, I will respond asap.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php
+            }
+            if ($_GET['sent'] == 0 && $_GET['reason'] == "captcha") {
+                ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Message NOT sent.</strong> Please fill out the required captcha.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php
+            }
+            if ($_GET['sent'] == 0 && $_GET['reason'] == "PHPMailer") {
+                ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Message NOT sent.</strong> Email not working...
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php
+            }
+            $alert = ob_get_clean();
         }
-        if ($_GET['sent'] == 0 && $_GET['reason'] == "captcha") {
-            ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Message NOT sent.</strong> Please fill out the required captcha.
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-        }
-        if ($_GET['sent'] == 0 && $_GET['reason'] == "PHPMailer") {
-            ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Message NOT sent.</strong> Email not working...
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <?php
-        }
-        $alert = ob_get_clean();
 
         return App::view('contact', [
             'pageTitle' => 'Contact',
