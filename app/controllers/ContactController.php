@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 class ContactController
 {
 
-    public static function index()
+    public function index()
     {
         $alert = '';
         if (isset($_GET['sent'])) {
@@ -43,7 +43,7 @@ class ContactController
         ]);
     }
 
-    public static function sendContactEmail()
+    public function sendContactEmail()
     {
         require './app/PHPMailer/src/Exception.php';
         require './app/PHPMailer/src/PHPMailer.php';
@@ -105,7 +105,7 @@ class ContactController
 
     }
 
-    function post_captcha($user_response)
+    public function post_captcha($user_response)
     {
         $fields_string = '';
         $fields = array(
