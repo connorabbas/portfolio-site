@@ -55,29 +55,32 @@
 </style>
 <script>
 
-    $('#submitBtn').click(function(){
-        $(this).prop('disabled', true);
-        $(this).html('<span style="line-height:1rem;" >Sending Message</span> &nbsp;<span style="height:1rem;width:1rem;" class="spinner-border text-light" role="status"></span>');
-    });
-
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {
-    'use strict'
+        'use strict'
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
 
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-            }
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                } else {
+                    $(this).prop('disabled', true);
+                    $(this).html('<span style="line-height:1rem;" >Sending Message</span> &nbsp;<span style="height:1rem;width:1rem;" class="spinner-border text-light" role="status"></span>');
+                }
 
-            form.classList.add('was-validated')
-        }, false)
+                form.classList.add('was-validated')
+            }, false)
         })
     })()
+
+    /* $(document).on('submit','form.remember',function(){
+        $(this).prop('disabled', true);
+        $(this).html('<span style="line-height:1rem;" >Sending Message</span> &nbsp;<span style="height:1rem;width:1rem;" class="spinner-border text-light" role="status"></span>');
+    }); */
 </script>
