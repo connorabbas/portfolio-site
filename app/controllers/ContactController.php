@@ -92,14 +92,14 @@ class ContactController
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             
                 $sent = $mail->send();
-                echo 'Message has been sent';
                 if ($sent) {
                     App::redirect('/contact?sent=1');
                 } else {
                     App::redirect('/contact?sent=0&reason=PHPMailer');
                 }
             } catch (Exception $e) {
-                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                App::redirect('/contact?sent=0&reason=PHPMailer');
             }
         }
 

@@ -44,6 +44,7 @@ class App
     {
         $path = ltrim($path, '/');
         header("location: ".BASE_DIR.$path);
+        exit();
     }
 
     public static function set_csrf()
