@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="row mb-5">
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4">
             <div class="card">
                 <div class="card-body">
                     <form action="<?=App::path('/send-contact-email')?>" method="post" class="needs-validation" novalidate>
