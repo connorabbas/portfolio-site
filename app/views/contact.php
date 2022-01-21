@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="g-recaptcha" data-sitekey="6Lf43CoeAAAAAOQ6wyiidT5H8cxoq7sih2O3eeNY" data-theme="dark"></div><br>
-                        <button class="btn btn-primary btn-rounded" type="submit">Send Message</button>
+                        <button class="btn btn-primary btn-rounded" type="submit" id="submitBtn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -54,6 +54,12 @@
     }
 </style>
 <script>
+
+    $('#submitBtn').click(function(){
+        $(this).prop('disabled', true);
+        $(this).html('<span style="line-height:1rem;" >Sending Message</span> &nbsp;<span style="height:1rem;width:1rem;" class="spinner-border text-light" role="status"></span>');
+    });
+
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (function () {
     'use strict'
