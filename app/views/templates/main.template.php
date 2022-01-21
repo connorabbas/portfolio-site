@@ -33,6 +33,7 @@
 
     <!-- Scripts -->
     <script src='<?=App::path('/resources/js/jquery.min.js')?>' type='text/javascript'></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Page Title -->
     <title>Connor Abbas - <?= $pageTitle ?></title>

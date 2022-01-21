@@ -9,19 +9,29 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <form action="<?=App::path('/send-contact-email')?>" method="post">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="nameFloat" placeholder="Your Name" name="name">
+                    <form action="<?=App::path('/send-contact-email')?>" method="post" class="needs-validation" novalidate>
+                        <div class="form-floating mb-3 has-validation">
+                            <input type="text" class="form-control" id="nameFloat" placeholder="Your Name" name="name" required>
                             <label for="nameFloat">Your Name</label>
+                            <div class="invalid-feedback mb-3">
+                                Please enter your name.
+                            </div>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="emailFloat" placeholder="Your Email Address" name="email">
+                        <div class="form-floating mb-3 has-validation">
+                            <input type="email" class="form-control" id="emailFloat" placeholder="Your Email Address" name="email" required>
                             <label for="emailFloat">Your Email Address</label>
+                            <div class="invalid-feedback mb-3">
+                                Please enter a valid Email Address.
+                            </div>
                         </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Leave a message here" id="messageFloat" name="message" style="height: 200px"></textarea>
+                        <div class="form-floating mb-3 has-validation">
+                            <textarea class="form-control" placeholder="Leave a message here" id="messageFloat" name="message" style="height: 200px" required></textarea>
                             <label for="messageFloat">Message</label>
+                            <div class="invalid-feedback mb-3">
+                                Please enter a message for me!.
+                            </div>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6Lf43CoeAAAAAOQ6wyiidT5H8cxoq7sih2O3eeNY" data-theme="dark"></div><br>
                         <button class="btn btn-primary btn-rounded" type="submit">Send Message</button>
                     </form>
                 </div>
@@ -37,3 +47,30 @@
         </div>
     </div>
 </div>
+<style>
+    .invalid-feedback, .invalid-tooltip {
+        position: relative;
+    }
+</style>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+        }, false)
+        })
+    })()
+</script>
