@@ -70,8 +70,8 @@
                     event.preventDefault()
                     event.stopPropagation()
                 } else {
-                    $(this).prop('disabled', true);
-                    $(this).html('<span style="line-height:1rem;" >Sending Message</span> &nbsp;<span style="height:1rem;width:1rem;" class="spinner-border text-light" role="status"></span>');
+                    $('#submitBtn').prop('disabled', true);
+                    $('#submitBtn').html('<span style="line-height:1rem;" >Sending Message</span> &nbsp;<span style="height:1rem;width:1rem;" class="spinner-border text-light" role="status"></span>');
                 }
 
                 form.classList.add('was-validated')
