@@ -59,7 +59,7 @@ class ContactController
             // If CAPTCHA is successfully completed...
             try {
                 //Recipients
-                $mail->setFrom('abbasconnor@gmail.com', 'Mailer');
+                $mail->setFrom('abbasconnor@gmail.com', "Connor's Site");
                 $mail->addAddress('abbasconnor@gmail.com', 'Connor Abbas'); //Add a recipient
                 $mail->addReplyTo('abbasconnor@gmail.com', 'Information');
 
