@@ -39,7 +39,7 @@
         <?php
         foreach ($otherProjects as $project) {
             ?>
-            <div class="col-md-3 mb-4">
+            <!-- <div class="col-md-3 mb-4">
                 <div class="card sh-card proj_card shadow-3" data-title="<?= $project['title'] ?>">
                     <div class="card-body">
                         <h5 class="card-title mb-3">
@@ -47,6 +47,18 @@
                         </h5>
                     </div>
                 </div>
+            </div> -->
+            <div class="col-md-3 mb-4">
+                <a href="<?= $project['link'] ?>" target="_blank">
+                    <div class="card sh-card">
+                        <div class="overlay_container shadow">
+                            <img src="<?=App::path('/resources/images/'.$project['img']) ?>" alt="work_img" class="overlay_image">
+                            <div class="overlay_overlay">
+                                <div class="overlay_text"><?= $project['title'] ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
             <?php
         }

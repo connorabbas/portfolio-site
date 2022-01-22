@@ -30,27 +30,22 @@ class ProjectsController
         $otherProjects = [
             [
                 'title' => 'CAMABBAS Design',
-                'cat' => 'Full Stack',
+                'link' => 'https://cam-abbas.com',
                 'img' => 'camdesign.png',
             ],
             [
                 'title' => 'T&M Lobby Group',
-                'cat' => 'Full Stack',
+                'link' => 'https://tmlobbygroup.com/',
                 'img' => 'cap2.png',
             ],
             [
-                'title' => 'Elementor Widgets',
-                'cat' => 'WordPress',
-                'img' => 'WP-ELEM.png',
-            ],
-            [
                 'title' => 'Posty',
-                'cat' => 'Laravel',
+                'link' => 'https://github.com/connorabbas/posty',
                 'img' => 'laravel.png',
             ],
             [
                 'title' => 'Budget Tracker',
-                'cat' => 'React JS',
+                'link' => 'https://github.com/connorabbas/budget-tracker',
                 'img' => 'react.png',
             ],
         ];

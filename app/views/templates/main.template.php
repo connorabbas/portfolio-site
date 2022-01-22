@@ -74,6 +74,7 @@
             </div>
         </div>
     </nav>
+    <!-- animate__fadeIn -->
     <div id="contentContainer" class="animate__animated animate__fadeIn">
         <?php
         // Content View
