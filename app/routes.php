@@ -18,4 +18,7 @@ $routes->get('/projects', [ProjectsController::class, 'index']);
 $routes->get('/contact', [ContactController::class, 'index']);
 $routes->post('/send-contact-email', [ContactController::class, 'sendContactEmail']);
 
+//AJAX
+$routes->post('/ajax', [AJAXController::class, 'index']);
+
 $routes->checkRoute();

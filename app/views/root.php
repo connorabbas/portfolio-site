@@ -13,7 +13,7 @@
             <h1 class="mb-4">Hey, I'm Connor</h1>
             <p class="mb-4 text-muted">A software engineer specializing in full-stack web development</p>
             <a href="<?=App::path('/about')?>">
-                <button class="btn btn-primary btn-rounded w-auto" style="width:auto !important;">More About Me...</button>
+                <button class="btn btn-info btn-rounded w-auto" style="width:auto !important;">More About Me...</button>
             </a>
         </div>
     </div>

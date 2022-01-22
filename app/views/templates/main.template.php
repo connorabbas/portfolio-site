@@ -27,6 +27,7 @@
 
     <!-- Resources -->
     <link href="<?=App::path('/resources/css/bootstrap/mdb.dark.min.css')?>" rel="stylesheet">
+    <!-- <link href="<?=App::path('/resources/css/bootstrap/bootstrap.min.css')?>" rel="stylesheet"> -->
     <link href="<?=App::path('/resources/css/styles.css')?>" rel="stylesheet">
     <link href="<?=App::path('/resources/css/animate.min.css')?>" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -78,7 +79,7 @@
         // Content View
         App::view($view, $data, null);
         ?>
-        <div class="area">
+        <div class="square_area">
             <ul class="circles">
             <li></li>
             <li></li>
@@ -96,6 +97,7 @@
 
 
     <!-- Script Resources -->
+    <script src="<?=App::path('/resources/js/bootstrap/mdb.min.js')?>"></script>
     <script src="<?=App::path('/resources/js/bootstrap/bootstrap.bundle.min.js')?>"></script>
 
     </body><!-- CLose body from header.php -->

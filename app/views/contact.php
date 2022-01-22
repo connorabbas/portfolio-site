@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="g-recaptcha" data-sitekey="6Lf43CoeAAAAAOQ6wyiidT5H8cxoq7sih2O3eeNY" data-theme="dark"></div><br>
-                        <button class="btn btn-primary btn-rounded" type="submit" id="submitBtn">Send Message</button>
+                        <button class="btn btn-info btn-rounded" type="submit" id="submitBtn">Send Message</button>
                     </form>
                 </div>
             </div>
