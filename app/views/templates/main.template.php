@@ -63,8 +63,11 @@
                     <li class="nav-item pe-3">
                         <a class="nav-link" href="<?=App::path('/projects')?>">Projects</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item pe-3">
                         <a class="nav-link" href="<?=App::path('/contact')?>">Contact</a>
+                    </li>
+                    <li class="nav-item pe-3">
+                        <a class="nav-link" href="https://resume.io/r/mgpQrpCTt" target="_blank">Resume</a>
                     </li>
                 </ul>
                 <div class="d-flex">
