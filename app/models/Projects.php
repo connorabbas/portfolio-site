@@ -89,7 +89,7 @@ class Projects
         ?>
         <div class="small">
             <p class="">South Dakota Area Obituaries covers obituaries for all of South Dakota and surrounding areas.</p>
-            <p class="mb-4"><a href="https://areaobituaries.com/obituaries/">South Dakota Area Obituaries</a></p>
+            <p class="mb-4"><a href="https://areaobituaries.com/obituaries/" target="_blank">South Dakota Area Obituaries</a></p>
             <p class="fw-bold">Site Features</p>
             <ul class="text-muted">
                 <li>Combination of data collected from funeral home RSS feeds, and registered accounts posting obituaries</li>
