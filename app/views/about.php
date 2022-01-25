@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row mt-5 mb-4">
         <div class="col">
-            <h1>About Me</h1>
+            <h1 class="fw-bold mb-4">About Me</h1>
         </div>
     </div>
     <div class="row mb-5">

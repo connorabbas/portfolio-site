@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row mt-5 mb-4">
         <div class="col-md-6">
-            <h1 class="mb-4">Experience</h1>
+            <h1 class="mb-4 fw-bold">Experience</h1>
             <!-- <p class="small text-muted mb-4">I have experience in creating custom devloped tools with php using professional coding standards, making eye-catching front end designs from scratch, and building practical UI and UX content. I love the process creating a project from start to finish, reimagining legacy projects, and making them simple to use for the client or end-user</p> -->
         </div>
     </div>
