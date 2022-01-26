@@ -15,8 +15,7 @@
                         <span class="badge rounded-pill bg-secondary">MVC Applicaitons</span>
                         <span class="badge rounded-pill bg-secondary">OOP</span>
                         <span class="badge rounded-pill bg-secondary">WordPress</span>
-                        <span class="badge rounded-pill bg-secondary">Laravel</span>
-                        <span class="badge rounded-pill bg-secondary">CodeIgniter</span>
+                        <span class="badge rounded-pill bg-secondary">Frameworks</span>
                         <span class="badge rounded-pill bg-secondary">PDO</span>
                     </div>
                 </div>
