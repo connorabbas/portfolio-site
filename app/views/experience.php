@@ -66,10 +66,16 @@
             </div>
         </div>
     </div>
+    <div class="row mb-4">
+        <div class="col">
+            <h5>Current Focus:</h5>
+            <p class="small text-muted">Mastering Laravel with Vue.js</p>
+        </div>
+    </div>
     <div class="row mb-5">
         <div class="col">
             <h5>Interested in:</h5>
-            <p class="small text-muted">Next.js, Nuxt.js, Solid.js, Svelte.js, React Native, Docker, Tailwind, Headless CMS Solutions</p>
+            <p class="small text-muted">Next.js, Nuxt.js, Solid.js, Svelte.js, React Native, Docker, Tailwind, headless CMS solutions</p>
         </div>
     </div>
 </div>
