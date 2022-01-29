@@ -31,8 +31,8 @@
                         <span class="badge rounded-pill bg-primary">JS</span>
                         <span class="badge rounded-pill bg-primary">Bootstrap</span>
                         <span class="badge rounded-pill bg-primary">jQuery</span>
-                        <span class="badge rounded-pill bg-primary">AJAX</span>
-                        <span class="badge rounded-pill bg-primary">React JS</span>
+                        <span class="badge rounded-pill bg-primary">React.js</span>
+                        <span class="badge rounded-pill bg-primary">Vue.js</span>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
     <div class="row mb-5">
         <div class="col">
             <h5>Interested in:</h5>
-            <p class="small text-muted">Next JS, Vue JS, React Native, Docker, Tailwind, Headless CMS Solutions</p>
+            <p class="small text-muted">Next.js, Nuxt.js, Solid.js, Svelte.js, React Native, Docker, Tailwind, Headless CMS Solutions</p>
         </div>
     </div>
 </div>
