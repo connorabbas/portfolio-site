@@ -9,9 +9,10 @@ class Projects
         <div class="small ">
             <p>PHP Mini Framework is a project I created in my free time as a challenge/solution for some of my developments at home and work.</p>
             <p>The idea behind the project was to create a very simple, lightweight, and customizable PHP framework that had useful basic tools like routing, MVC architecture, and database access.</p>
-            <p>This project was a lot of fun to make, and I have since used the framework code on some projects for work and at home, including this site!</p>
-            <p class="mb-4">As well as the base framework code, I created a documentation site: <a href="https://php-mf-docs.connor-abbas.com/" target="_blank">PHP-MF Docs</a></p>
-            <a href="https://github.com/connorabbas/php-mf" target="_blank"><button class="btn btn-rounded btn-info">Framework Repository</button></a>
+            <p class="mb-4">This project was a lot of fun to make, and I have since used the framework code on some projects for work and at home, including this site!</p>
+            <!-- <p class="mb-4">As well as the base framework code, I created a documentation site: <a href="https://php-mf-docs.connor-abbas.com/" target="_blank">PHP-MF Docs</a></p> -->
+            <a href="https://github.com/connorabbas/php-mf" target="_blank"><button class="btn btn-rounded btn-dark me-2">Framework Repository</button></a>
+            <a href="https://php-mf-docs.connor-abbas.com/" target="_blank"><button class="btn btn-rounded btn-dark">Framework Documentation Site</button></a>
         </div>
         <?php
         $html = ob_get_clean();
