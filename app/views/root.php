@@ -11,7 +11,7 @@
     <div class="d-flex flex-column min-vh-100 justify-content-center align-items-left">
         <div class="w-auto">
             <h1 class="mb-4 fw-bold" style="font-size: 4rem;">Hey, I'm Connor</h1>
-            <p class="mb-4 text-muted">A software engineer specializing in full-stack web development</p>
+            <p class="mb-4 text-muted">A software developer specializing in full-stack web development</p>
             <a href="<?=App::path('/about')?>">
                 <button class="btn btn-info btn-rounded w-auto" style="width:auto !important;">More About Me...</button>
             </a>
